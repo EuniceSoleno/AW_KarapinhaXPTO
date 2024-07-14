@@ -2,18 +2,21 @@
 using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Karapinha.Repositorios.Repositorio
 {
     public class ServicoRepositorio : IServicoRepositorio
     {
-
         private readonly KarapinhaDBContext _dbcontex;
-       
-        public ServicoRepositorio(KarapinhaDBContext dBContext)
-        {
-            _dbcontex = dBContext;
+        private readonly CategoriaRepositorio _categoriaRepositorio;
 
+        public ServicoRepositorio(KarapinhaDBContext dbContext, CategoriaRepositorio categoriaRepositorio)
+        {
+            _dbcontex = dbContext;
+            _categoriaRepositorio = categoriaRepositorio;
         }
 
         public async Task<Servico> BuscarPorId(int id)
@@ -21,46 +24,58 @@ namespace Karapinha.Repositorios.Repositorio
             return await _dbcontex.Servicos.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task<Servico> BuscarPorNome(string nome)
+        {
+            return await _dbcontex.Servicos.FirstOrDefaultAsync(x => x.ServicoNome.Equals(nome));
+        }
+
         public async Task<List<Servico>> BuscarTodosServicos()
         {
             return await _dbcontex.Servicos.ToListAsync();
         }
+
         public async Task<Servico> Adicionar(Servico servico)
         {
-            await _dbcontex.Servicos.AddAsync(servico);
-            _dbcontex.SaveChanges();
+            // Verificar se categoria existe
+            var cat = await _categoriaRepositorio.BuscarPorId(servico.CategoriaId);
+            if (cat == null)
+            {
+                throw new KeyNotFoundException($"Impossível registrar o serviço, categoria inexistente.");
+            }
 
+            await _dbcontex.Servicos.AddAsync(servico);
+            await _dbcontex.SaveChangesAsync();
             return servico;
         }
 
         public async Task<Servico> Apagar(int id)
         {
-            Servico servicoPorId = await BuscarPorId(id);
+            var servicoPorId = await BuscarPorId(id);
             if (servicoPorId == null)
             {
-                throw new Exception($"Servico {id} not found.");
+                throw new KeyNotFoundException($"Serviço {id} não encontrado.");
             }
-            _dbcontex.Remove(servicoPorId);
-            _dbcontex.SaveChanges(true);
 
+            _dbcontex.Remove(servicoPorId);
+            await _dbcontex.SaveChangesAsync();
             return servicoPorId;
         }
 
         public async Task<Servico> Atualizar(Servico servico, int id)
         {
-            Servico servicoPorId = await BuscarPorId(id);
+            var servicoPorId = await BuscarPorId(id);
             if (servicoPorId == null)
             {
-                throw new Exception($"Servico {id} not found.");
+                throw new KeyNotFoundException($"Serviço {id} não encontrado.");
             }
+
             servicoPorId.ServicoNome = servico.ServicoNome;
             servicoPorId.Preco = servico.Preco;
             servicoPorId.CategoriaId = servico.CategoriaId;
-            
+
             _dbcontex.Update(servicoPorId);
-            _dbcontex.SaveChanges();
+            await _dbcontex.SaveChangesAsync();
             return servicoPorId;
         }
-
     }
 }

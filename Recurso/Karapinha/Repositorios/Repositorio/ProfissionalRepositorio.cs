@@ -2,54 +2,72 @@
 using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Karapinha.Repositorios.Repositorio
 {
     public class ProfissionalRepositorio : IProfissionalRepositorio
     {
         private readonly KarapinhaDBContext _dbcontex;
+        private readonly CategoriaRepositorio _categoriaRepositorio;
 
-        public ProfissionalRepositorio(KarapinhaDBContext dBContext)
+        public ProfissionalRepositorio(KarapinhaDBContext dbContext, CategoriaRepositorio categoriaRepositorio)
         {
-            _dbcontex = dBContext;
+            _dbcontex = dbContext;
+            _categoriaRepositorio = categoriaRepositorio;
         }
-
 
         public async Task<Profissional> BuscarPorId(int id)
         {
             return await _dbcontex.Profissionais.FirstOrDefaultAsync(x => x.id == id);
         }
 
+        public async Task<Profissional> BuscarPorNome(string nome)
+        {
+            return await _dbcontex.Profissionais.FirstOrDefaultAsync(x => x.ProfissionalNome.Equals(nome));
+        }
+
         public async Task<List<Profissional>> BuscarTodosProfissionais()
         {
             return await _dbcontex.Profissionais.ToListAsync();
         }
+
         public async Task<Profissional> Adicionar(Profissional profissional)
         {
+            var categoria = await _categoriaRepositorio.BuscarPorId(profissional.CategoriaId);
+            if (categoria == null)
+            {
+                throw new ArgumentException("A categoria associada ao profissional não existe.");
+            }
+
             await _dbcontex.Profissionais.AddAsync(profissional);
-            _dbcontex.SaveChangesAsync();
+            await _dbcontex.SaveChangesAsync();
             return profissional;
         }
 
         public async Task<Profissional> Apagar(int id)
         {
-            Profissional profissionalPorId = await BuscarPorId(id);
+            var profissionalPorId = await BuscarPorId(id);
             if (profissionalPorId == null)
             {
-                throw new Exception($"Profissional {id} nao encontrado");
+                throw new KeyNotFoundException($"Profissional {id} não encontrado.");
             }
+
             _dbcontex.Remove(profissionalPorId);
-            _dbcontex.SaveChanges();
+            await _dbcontex.SaveChangesAsync();
             return profissionalPorId;
         }
 
         public async Task<Profissional> Atualizar(Profissional profissional, int id)
         {
-            Profissional profissionalPorId = await BuscarPorId(id);
+            var profissionalPorId = await BuscarPorId(id);
             if (profissionalPorId == null)
             {
-                throw new Exception($"Profissional {id} nao encontrado");
+                throw new KeyNotFoundException($"Profissional {id} não encontrado.");
             }
+
             profissionalPorId.ProfissionalNome = profissional.ProfissionalNome;
             profissionalPorId.password = profissional.password;
             profissionalPorId.bi = profissional.bi;
@@ -59,12 +77,8 @@ namespace Karapinha.Repositorios.Repositorio
             profissionalPorId.endereco = profissional.endereco;
 
             _dbcontex.Update(profissionalPorId);
-            _dbcontex.SaveChanges();
-
+            await _dbcontex.SaveChangesAsync();
             return profissionalPorId;
-
-
         }
-
     }
 }

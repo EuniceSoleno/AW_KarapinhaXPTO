@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Karapinha")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7547c28d37b76c5e41a1174a5d7fb85f7d96b625")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aefb191b095d57942d0e49c04bc7fb02fb0c3d8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Karapinha")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Karapinha")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

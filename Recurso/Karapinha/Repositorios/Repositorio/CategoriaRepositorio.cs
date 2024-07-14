@@ -26,6 +26,11 @@ namespace Karapinha.Repositorios.Repositorio
             return await _dbcontex.Categorias.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task<Categoria> BuscarPorNome(string nome)
+        {
+            return await _dbcontex.Categorias.FirstOrDefaultAsync(x => x.CategoriaNome.Equals(nome));
+        }
+
         public async Task<List<Categoria>> BuscarTodasCategorias()
         {
             return await _dbcontex.Categorias.ToListAsync();
@@ -58,5 +63,7 @@ namespace Karapinha.Repositorios.Repositorio
             await _dbcontex.SaveChangesAsync(); // Certifique-se de aguardar SaveChangesAsync
             return categoriaporId;
         }
+
+        
     }
 }

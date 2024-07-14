@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha\\repositorios\\repositorio\\servicorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:repositorios\\repositorio\\servicorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha\\repositorios\\repositorio\\categoriarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:repositorios\\repositorio\\categoriarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha\\model\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:model\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha\\data\\karapinhadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:data\\karapinhadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,49 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoriaRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Repositorios\\Repositorio\\CategoriaRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Repositorio\\CategoriaRepositorio.cs",
-              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Repositorios\\Repositorio\\CategoriaRepositorio.cs",
-              "RelativeToolTip": "Repositorios\\Repositorio\\CategoriaRepositorio.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T14:31:09.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServicoRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Repositorios\\Repositorio\\ServicoRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Repositorio\\ServicoRepositorio.cs",
-              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Repositorios\\Repositorio\\ServicoRepositorio.cs",
-              "RelativeToolTip": "Repositorios\\Repositorio\\ServicoRepositorio.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAHAAAA",
+              "Title": "KarapinhaDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Data\\KarapinhaDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\KarapinhaDBContext.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Data\\KarapinhaDBContext.cs",
+              "RelativeToolTip": "Data\\KarapinhaDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T14:26:21.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Servico.cs",
-              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Model\\Servico.cs",
-              "RelativeDocumentMoniker": "Model\\Servico.cs",
-              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Model\\Servico.cs",
-              "RelativeToolTip": "Model\\Servico.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T14:26:07.141Z",
+              "WhenOpened": "2024-07-14T16:45:45.699Z",
               "EditorCaption": ""
             }
           ]

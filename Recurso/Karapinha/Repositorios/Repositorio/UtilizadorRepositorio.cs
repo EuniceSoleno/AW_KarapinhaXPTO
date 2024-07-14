@@ -2,13 +2,17 @@
 using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Karapinha.Repositorios.Repositorio
 {
     public class UtilizadorRepositorio : IUtilizadorRepositorio
     {
         private readonly KarapinhaDBContext _dbcontext;
-        public UtilizadorRepositorio (KarapinhaDBContext dbcontext)
+
+        public UtilizadorRepositorio(KarapinhaDBContext dbcontext)
         {
             _dbcontext = dbcontext;
         }
@@ -22,48 +26,55 @@ namespace Karapinha.Repositorios.Repositorio
         {
             return await _dbcontext.Utilizadores.ToListAsync();
         }
+
         public async Task<Utilizador> Adicionar(Utilizador utilizador)
         {
-            await _dbcontext.Utilizadores.AddAsync( utilizador);
-            _dbcontext.SaveChangesAsync();
+            if (utilizador == null)
+            {
+                throw new ArgumentNullException(nameof(utilizador), "O utilizador não pode ser nulo.");
+            }
+
+            await _dbcontext.Utilizadores.AddAsync(utilizador);
+            await _dbcontext.SaveChangesAsync();
             return utilizador;
         }
 
         public async Task<Utilizador> Atualizar(Utilizador utilizador, int id)
         {
-           Utilizador utilizadorPorId = await BuscarPorId (id);
-
-            if(utilizadorPorId == null)
+            if (utilizador == null)
             {
-                throw new Exception($"Utilizador para o id: {id} nao encontado");
+                throw new ArgumentNullException(nameof(utilizador), "O utilizador não pode ser nulo.");
             }
+
+            var utilizadorPorId = await BuscarPorId(id);
+            if (utilizadorPorId == null)
+            {
+                throw new KeyNotFoundException($"Utilizador com id {id} não encontrado.");
+            }
+
             utilizadorPorId.password = utilizador.password;
             utilizadorPorId.bi = utilizador.bi;
             utilizadorPorId.telemovel = utilizador.telemovel;
             utilizadorPorId.username = utilizador.username;
             utilizadorPorId.nomeCompleto = utilizador.nomeCompleto;
             utilizadorPorId.endereco = utilizador.endereco;
-            _dbcontext.Update( utilizadorPorId );
-            _dbcontext.SaveChanges();
-            return utilizador;
+
+            _dbcontext.Update(utilizadorPorId);
+            await _dbcontext.SaveChangesAsync();
+            return utilizadorPorId;
         }
 
         public async Task<Utilizador> Apagar(int id)
         {
-            Utilizador utilizadorPorId = await BuscarPorId(id);
-
+            var utilizadorPorId = await BuscarPorId(id);
             if (utilizadorPorId == null)
             {
-                throw new Exception($"Utilizador para o id: {id} nao encontado");
+                throw new KeyNotFoundException($"Utilizador com id {id} não encontrado.");
             }
-            _dbcontext.Remove( utilizadorPorId );
-            _dbcontext.SaveChanges( true );
+
+            _dbcontext.Remove(utilizadorPorId);
+            await _dbcontext.SaveChangesAsync();
             return utilizadorPorId;
-
         }
-
-       
-
-
     }
 }
