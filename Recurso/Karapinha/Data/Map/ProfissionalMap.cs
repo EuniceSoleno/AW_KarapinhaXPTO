@@ -16,8 +16,9 @@ namespace Karapinha.Data.Map
             builder.Property(x => x.bi).IsRequired().HasMaxLength(20);
             builder.Property(x => x.password).IsRequired().HasMaxLength(100);
             builder.Property(x => x.photo).HasColumnType("varbinary(max)");
+            builder.Property(x => x.CategoriaId).IsRequired();
 
-            builder.HasOne(x => x.Categoria);
+            /*builder.HasOne(x => x.Categoria);*/
         }
     }
 }

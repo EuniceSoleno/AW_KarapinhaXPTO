@@ -12,8 +12,9 @@ namespace Karapinha.Data.Map
 
             builder.Property(x => x.ServicoNome).IsRequired().HasMaxLength(255);
             builder.Property(x => x.Preco).IsRequired().HasColumnType("float");
+            builder.Property(x => x.CategoriaId).IsRequired();
 
-            builder.HasOne(x => x.Categoria);
+            /*builder.HasOne(x => x.Categoria);*/
         }
     }
 }

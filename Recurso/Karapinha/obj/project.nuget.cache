@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O5dJ0XYu39Y=",
+  "dgSpecHash": "PA7Aqp5xiyQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Karapinha.csproj",
+  "projectFilePath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Karapinha.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AL NAKHLA\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\AL NAKHLA\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

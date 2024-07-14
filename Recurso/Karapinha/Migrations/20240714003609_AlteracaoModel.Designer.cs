@@ -4,6 +4,7 @@ using Karapinha.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Karapinha.Migrations
 {
     [DbContext(typeof(KarapinhaDBContext))]
-    partial class KarapinhaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240714003609_AlteracaoModel")]
+    partial class AlteracaoModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -90,14 +92,11 @@ namespace Karapinha.Migrations
 
             modelBuilder.Entity("Karapinha.Model.Profissional", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("CategoriaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
-
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriaId"), 1L, 1);
 
                     b.Property<string>("ProfissionalNome")
                         .IsRequired()
@@ -114,6 +113,9 @@ namespace Karapinha.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int>("id")
+                        .HasColumnType("int");
+
                     b.Property<string>("password")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -128,20 +130,20 @@ namespace Karapinha.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
-                    b.HasKey("id");
+                    b.HasKey("CategoriaId");
 
                     b.ToTable("Profissionais");
                 });
 
             modelBuilder.Entity("Karapinha.Model.Servico", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CategoriaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriaId"), 1L, 1);
 
-                    b.Property<int>("CategoriaId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<double>("Preco")
@@ -152,7 +154,7 @@ namespace Karapinha.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CategoriaId");
 
                     b.ToTable("Servicos");
                 });
@@ -170,12 +172,12 @@ namespace Karapinha.Migrations
                         .HasMaxLength(2)
                         .HasColumnType("nvarchar(2)");
 
-                    b.Property<int>("Profissionalid")
+                    b.Property<int>("ProfissionalCategoriaId")
                         .HasColumnType("int");
 
                     b.HasKey("ProfissionalNome", "hora", "minuto");
 
-                    b.HasIndex("Profissionalid");
+                    b.HasIndex("ProfissionalCategoriaId");
 
                     b.ToTable("TabelaDeHorario");
                 });
@@ -231,7 +233,7 @@ namespace Karapinha.Migrations
                 {
                     b.HasOne("Karapinha.Model.Profissional", "Profissional")
                         .WithMany()
-                        .HasForeignKey("Profissionalid")
+                        .HasForeignKey("ProfissionalCategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

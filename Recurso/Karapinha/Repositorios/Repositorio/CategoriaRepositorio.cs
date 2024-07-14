@@ -14,25 +14,24 @@ namespace Karapinha.Repositorios.Repositorio
             _dbcontex = dBContext;
         }
 
-        public async Task<Model.Categoria> Adicionar(Model.Categoria categoria)
+        public async Task<Categoria> Adicionar(Categoria categoria)
         {
-           await _dbcontex.AddAsync(categoria);
-            _dbcontex.SaveChangesAsync();
+            await _dbcontex.AddAsync(categoria);
+            await _dbcontex.SaveChangesAsync(); // Correção aplicada
             return categoria;
         }
 
-        public async Task<Model.Categoria> BuscarPorId(int id)
+        public async Task<Categoria> BuscarPorId(int id)
         {
             return await _dbcontex.Categorias.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<Model.Categoria>> BuscarTodasCategorias()
+        public async Task<List<Categoria>> BuscarTodasCategorias()
         {
             return await _dbcontex.Categorias.ToListAsync();
-
         }
 
-        public async Task<Model.Categoria> Apagar(int id)
+        public async Task<Categoria> Apagar(int id)
         {
             Categoria categoria = await BuscarPorId(id);
 
@@ -41,11 +40,11 @@ namespace Karapinha.Repositorios.Repositorio
                 throw new Exception($"Categoria com {id} nao encontada");
             }
             _dbcontex.Remove(categoria);
-            _dbcontex.SaveChanges();
+            await _dbcontex.SaveChangesAsync(); // Certifique-se de aguardar SaveChangesAsync
             return categoria;
         }
 
-        public async Task<Model.Categoria> Atualizar(Model.Categoria categoria, int id)
+        public async Task<Categoria> Atualizar(Categoria categoria, int id)
         {
             Categoria categoriaporId = await BuscarPorId(id);
 
@@ -56,11 +55,8 @@ namespace Karapinha.Repositorios.Repositorio
             categoriaporId.Descricao = categoria.Descricao;
             categoriaporId.CategoriaNome = categoria.CategoriaNome;
             _dbcontex.Update(categoriaporId);
-            _dbcontex.SaveChanges();
+            await _dbcontex.SaveChangesAsync(); // Certifique-se de aguardar SaveChangesAsync
             return categoriaporId;
-
-
         }
-
     }
 }

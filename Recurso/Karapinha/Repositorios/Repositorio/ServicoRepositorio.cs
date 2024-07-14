@@ -9,7 +9,7 @@ namespace Karapinha.Repositorios.Repositorio
     {
 
         private readonly KarapinhaDBContext _dbcontex;
-
+       
         public ServicoRepositorio(KarapinhaDBContext dBContext)
         {
             _dbcontex = dBContext;

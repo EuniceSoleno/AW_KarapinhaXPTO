@@ -16,13 +16,16 @@ namespace Karapinha.Data.Map
             builder.Property(x => x.DiaSemana).IsRequired().HasMaxLength(10);
             builder.Property(x => x.hora).IsRequired().HasMaxLength(2);
             builder.Property(x => x.minuto).IsRequired().HasMaxLength(2);
+            builder.Property(x => x.CategoriaNome).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.ProfissionalNome).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.ServicoNome).IsRequired().HasMaxLength(100);
 
-            builder.HasOne(x => x.Categoria);
+           /* builder.HasOne(x => x.Categoria);
 
 
             builder.HasOne(x => x.Servico);
 
-            builder.HasOne(x => x.Profissional);
+            builder.HasOne(x => x.Profissional);*/
 
         }
     }

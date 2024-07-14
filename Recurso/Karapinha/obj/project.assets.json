@@ -2440,11 +2440,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Karapinha.csproj",
+      "projectUniqueName": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Karapinha.csproj",
       "projectName": "Karapinha",
-      "projectPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Karapinha.csproj",
+      "projectPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Karapinha.csproj",
       "packagesPath": "C:\\Users\\AL NAKHLA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\obj\\",
+      "outputPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AL NAKHLA\\AppData\\Roaming\\NuGet\\NuGet.Config",

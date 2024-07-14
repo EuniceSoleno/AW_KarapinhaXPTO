@@ -7,7 +7,7 @@ namespace Karapinha.Model
         public string ServicoNome { get; set; }
         public float Preco { get; set; }
         public int CategoriaId { get; set; }
-        public virtual Categoria? Categoria { get; set; }
+        /*public virtual Categoria? Categoria { get; set; }*/
 
         public static implicit operator bool(Servico v)
         {
