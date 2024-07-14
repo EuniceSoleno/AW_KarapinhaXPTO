@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha16\\repositorios\\interface\\iemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:repositorios\\interface\\iemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha16\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha16\\repositorios\\repositorio\\emailrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:repositorios\\repositorio\\emailrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha16\\model\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:model\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha16\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-21T20:04:51.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Repositorios\\Repositorio\\EmailRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Repositorio\\EmailRepositorio.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Repositorios\\Repositorio\\EmailRepositorio.cs",
+              "RelativeToolTip": "Repositorios\\Repositorio\\EmailRepositorio.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T18:38:37.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmailController.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "Controllers\\EmailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T18:02:21.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IEmail.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Repositorios\\Interface\\IEmail.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Interface\\IEmail.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Repositorios\\Interface\\IEmail.cs",
+              "RelativeToolTip": "Repositorios\\Interface\\IEmail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T18:35:22.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Email.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Model\\Email.cs",
+              "RelativeDocumentMoniker": "Model\\Email.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Model\\Email.cs",
+              "RelativeToolTip": "Model\\Email.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T18:41:43.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha16\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T19:58:00.871Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
