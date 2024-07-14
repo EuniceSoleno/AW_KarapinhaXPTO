@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\migrations\\20240713235637_inicializacaokarapinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:migrations\\20240713235637_inicializacaokarapinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\data\\karapinhadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:data\\karapinhadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\model\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:model\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\data\\map\\utilizadormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:data\\map\\utilizadormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\data\\map\\servicomap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:data\\map\\servicomap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\model\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:model\\servico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\recurso\\karapinha\\data\\map\\profissionalmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:data\\map\\profissionalmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240713235637_InicializacaoKarapinha.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Migrations\\20240713235637_InicializacaoKarapinha.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240713235637_InicializacaoKarapinha.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Migrations\\20240713235637_InicializacaoKarapinha.cs",
+              "RelativeToolTip": "Migrations\\20240713235637_InicializacaoKarapinha.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:56:39.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KarapinhaDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\KarapinhaDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\KarapinhaDBContext.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\KarapinhaDBContext.cs",
+              "RelativeToolTip": "Data\\KarapinhaDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:56:14.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Utilizador.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Model\\Utilizador.cs",
+              "RelativeDocumentMoniker": "Model\\Utilizador.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Model\\Utilizador.cs",
+              "RelativeToolTip": "Model\\Utilizador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:52:13.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UtilizadorMap.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\Map\\UtilizadorMap.cs",
+              "RelativeDocumentMoniker": "Data\\Map\\UtilizadorMap.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\Map\\UtilizadorMap.cs",
+              "RelativeToolTip": "Data\\Map\\UtilizadorMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:52:06.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServicoMap.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\Map\\ServicoMap.cs",
+              "RelativeDocumentMoniker": "Data\\Map\\ServicoMap.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\Map\\ServicoMap.cs",
+              "RelativeToolTip": "Data\\Map\\ServicoMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:51:14.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Servico.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Model\\Servico.cs",
+              "RelativeDocumentMoniker": "Model\\Servico.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Model\\Servico.cs",
+              "RelativeToolTip": "Model\\Servico.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:51:09.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfissionalMap.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\Map\\ProfissionalMap.cs",
+              "RelativeDocumentMoniker": "Data\\Map\\ProfissionalMap.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Recurso\\Karapinha\\Data\\Map\\ProfissionalMap.cs",
+              "RelativeToolTip": "Data\\Map\\ProfissionalMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T23:49:04.322Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
