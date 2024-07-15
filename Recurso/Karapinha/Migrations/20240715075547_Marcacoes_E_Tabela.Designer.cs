@@ -4,6 +4,7 @@ using Karapinha.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Karapinha.Migrations
 {
     [DbContext(typeof(KarapinhaDBContext))]
-    partial class KarapinhaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240715075547_Marcacoes_E_Tabela")]
+    partial class Marcacoes_E_Tabela
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

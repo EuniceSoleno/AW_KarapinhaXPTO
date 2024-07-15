@@ -1,4 +1,6 @@
 ﻿using Karapinha.Model;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Karapinha.Repositorios.Interface
 {
@@ -8,6 +10,6 @@ namespace Karapinha.Repositorios.Interface
         Task<Utilizador> BuscarPorId(int id);
         Task<Utilizador> Adicionar(Utilizador utilizador);
         Task<Utilizador> Atualizar(Utilizador utilizador, int id);
-        Task<Utilizador> Apagar(int id);
+        Task<bool> Apagar(int id);
     }
 }

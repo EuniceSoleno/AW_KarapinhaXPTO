@@ -1,6 +1,5 @@
 ﻿using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;

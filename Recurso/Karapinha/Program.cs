@@ -30,7 +30,12 @@ namespace Karapinha
             builder.Services.AddScoped<IMarcacaoRepositorio, MarcacaoRepositorio>();
             builder.Services.AddScoped<IProfissionalRepositorio, ProfissionalRepositorio>();
             builder.Services.AddScoped<IServicoRepositorio, ServicoRepositorio>();
-           /* builder.Services.AddScoped<ITabelaRepositorio, TabelaRepositorio>(); */
+            builder.Services.AddScoped<ITabelaDeHorarioRepositorio, TabelaDeHorarioRepositorio>(); // Adicionando o repositório para TabelaDeHorario
+
+            // Register dependencies directly
+            //  builder.Services.AddScoped<ProfissionalRepositorio>();
+            builder.Services.AddScoped<CategoriaRepositorio>();
+            builder.Services.AddScoped<ServicoRepositorio>();
 
             var app = builder.Build();
 

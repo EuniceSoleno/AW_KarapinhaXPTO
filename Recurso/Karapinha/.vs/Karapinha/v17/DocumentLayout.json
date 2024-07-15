@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha\\data\\karapinhadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:data\\karapinhadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|c:\\users\\al nakhla\\documents\\eunice_soleno\\aw\\asp.net\\recurso\\karapinha\\controllers\\marcacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D12446-36C4-4FBD-BB26-EFFEBD108614}|Karapinha.csproj|solutionrelative:controllers\\marcacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "KarapinhaDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Data\\KarapinhaDBContext.cs",
-              "RelativeDocumentMoniker": "Data\\KarapinhaDBContext.cs",
-              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Data\\KarapinhaDBContext.cs",
-              "RelativeToolTip": "Data\\KarapinhaDBContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
+              "Title": "MarcacaoController.cs",
+              "DocumentMoniker": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Controllers\\MarcacaoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MarcacaoController.cs",
+              "ToolTip": "C:\\Users\\AL NAKHLA\\Documents\\EUNICE_SOLENO\\AW\\Asp.Net\\Recurso\\Karapinha\\Controllers\\MarcacaoController.cs",
+              "RelativeToolTip": "Controllers\\MarcacaoController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T16:45:45.699Z",
+              "WhenOpened": "2024-07-15T08:11:03.471Z",
               "EditorCaption": ""
             }
           ]

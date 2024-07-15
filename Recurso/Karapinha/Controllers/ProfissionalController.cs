@@ -1,6 +1,5 @@
 ﻿using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -39,13 +38,21 @@ namespace Karapinha.Controllers
         [HttpPost]
         public async Task<ActionResult<Profissional>> Cadastrar([FromBody] Profissional profissional)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             Profissional novoProfissional = await _profissionalRepositorio.Adicionar(profissional);
-            return Ok(novoProfissional);
+            return CreatedAtAction(nameof(BuscarPorId), new { id = novoProfissional.id }, novoProfissional);
         }
 
         [HttpPut("{id}")]
         public async Task<ActionResult<Profissional>> Atualizar([FromBody] Profissional profissional, int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             Profissional profissionalAtualizado = await _profissionalRepositorio.Atualizar(profissional, id);
             if (profissionalAtualizado == null)
             {

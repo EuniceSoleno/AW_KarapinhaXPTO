@@ -11,9 +11,9 @@ namespace Karapinha.Repositorios.Repositorio
     public class ProfissionalRepositorio : IProfissionalRepositorio
     {
         private readonly KarapinhaDBContext _dbcontex;
-        private readonly CategoriaRepositorio _categoriaRepositorio;
+        private readonly ICategoriaRepositorio _categoriaRepositorio;
 
-        public ProfissionalRepositorio(KarapinhaDBContext dbContext, CategoriaRepositorio categoriaRepositorio)
+        public ProfissionalRepositorio(KarapinhaDBContext dbContext, ICategoriaRepositorio categoriaRepositorio)
         {
             _dbcontex = dbContext;
             _categoriaRepositorio = categoriaRepositorio;
@@ -21,12 +21,14 @@ namespace Karapinha.Repositorios.Repositorio
 
         public async Task<Profissional> BuscarPorId(int id)
         {
-            return await _dbcontex.Profissionais.FirstOrDefaultAsync(x => x.id == id);
+            return await _dbcontex.Profissionais
+                .FirstOrDefaultAsync(x => x.id == id);
         }
 
         public async Task<Profissional> BuscarPorNome(string nome)
         {
-            return await _dbcontex.Profissionais.FirstOrDefaultAsync(x => x.ProfissionalNome.Equals(nome));
+            return await _dbcontex.Profissionais
+                .FirstOrDefaultAsync(x => x.ProfissionalNome.Equals(nome));
         }
 
         public async Task<List<Profissional>> BuscarTodosProfissionais()
@@ -36,6 +38,19 @@ namespace Karapinha.Repositorios.Repositorio
 
         public async Task<Profissional> Adicionar(Profissional profissional)
         {
+            // Verifica se já existe um profissional com o mesmo BI
+            if (await _dbcontex.Profissionais.AnyAsync(p => p.bi == profissional.bi))
+            {
+                throw new ArgumentException("Já existe um profissional com este BI.");
+            }
+
+            // Verifica se já existe um profissional com o mesmo telemóvel
+            if (await _dbcontex.Profissionais.AnyAsync(p => p.telemovel == profissional.telemovel))
+            {
+                throw new ArgumentException("Já existe um profissional com este telemóvel.");
+            }
+
+            // Verifica se a categoria associada ao profissional existe
             var categoria = await _categoriaRepositorio.BuscarPorId(profissional.CategoriaId);
             if (categoria == null)
             {
@@ -68,6 +83,19 @@ namespace Karapinha.Repositorios.Repositorio
                 throw new KeyNotFoundException($"Profissional {id} não encontrado.");
             }
 
+            // Verifica se já existe um profissional com o mesmo BI, excluindo o profissional atual
+            if (await _dbcontex.Profissionais.AnyAsync(p => p.bi == profissional.bi && p.id != id))
+            {
+                throw new ArgumentException("Já existe um profissional com este BI.");
+            }
+
+            // Verifica se já existe um profissional com o mesmo telemóvel, excluindo o profissional atual
+            if (await _dbcontex.Profissionais.AnyAsync(p => p.telemovel == profissional.telemovel && p.id != id))
+            {
+                throw new ArgumentException("Já existe um profissional com este telemóvel.");
+            }
+
+            // Atualiza as propriedades do profissional
             profissionalPorId.ProfissionalNome = profissional.ProfissionalNome;
             profissionalPorId.password = profissional.password;
             profissionalPorId.bi = profissional.bi;

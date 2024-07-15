@@ -10,50 +10,36 @@ namespace Karapinha.Repositorios.Repositorio
 {
     public class MarcacaoRepositorio : IMarcacaoRepositorio
     {
-        private readonly KarapinhaDBContext _dbcontex;
+        private readonly KarapinhaDBContext _dbContext;
 
-        private readonly ProfissionalRepositorio _profissional;
-        private readonly CategoriaRepositorio _categoria;
-        private readonly ServicoRepositorio _servico;
-
-        public MarcacaoRepositorio(KarapinhaDBContext dbContext, ProfissionalRepositorio profissionalRepositorio, CategoriaRepositorio categoriaRepositorio, ServicoRepositorio servicoRepositorio)
+        public MarcacaoRepositorio(KarapinhaDBContext dbContext)
         {
-            _dbcontex = dbContext;
-            _profissional = profissionalRepositorio;
-            _categoria = categoriaRepositorio;
-            _servico = servicoRepositorio;
+            _dbContext = dbContext;
         }
 
         public async Task<Marcacao> BuscarPorId(int id)
         {
-            return await _dbcontex.Marcacoes.FirstOrDefaultAsync(m => m.Id == id);
+            return await _dbContext.Marcacoes
+                .Include(m => m.Categorias)
+                .Include(m => m.Servicos)
+                .Include(m => m.Profissionais)
+                .FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task<List<Marcacao>> BuscarTodasMarcacoes()
         {
-            return await _dbcontex.Marcacoes.ToListAsync();
+            return await _dbContext.Marcacoes
+                .Include(m => m.Categorias)
+                .Include(m => m.Servicos)
+                .Include(m => m.Profissionais)
+                .ToListAsync();
         }
 
         public async Task<Marcacao> Adicionar(Marcacao marcacao)
         {
-            var categoriaEncontrada = await _categoria.BuscarPorNome(marcacao.CategoriaNome);
-            if (categoriaEncontrada == null)
-            {
-                throw new ArgumentException("Categoria solicitada não encontrada");
-            }
-            var profissionalEncontrado = await _profissional.BuscarPorNome(marcacao.ProfissionalNome);
-            if (profissionalEncontrado == null)
-            {
-                throw new ArgumentException("Profissional solicitado não encontrado");
-            }
-            var servicoEncontrado = await _servico.BuscarPorNome(marcacao.ServicoNome);
-            if (servicoEncontrado == null)
-            {
-                throw new ArgumentException("Serviço solicitado não encontrado");
-            }
-
-            await _dbcontex.AddAsync(marcacao);
-            await _dbcontex.SaveChangesAsync();
+            // Adiciona as associações
+            _dbContext.Marcacoes.Add(marcacao);
+            await _dbContext.SaveChangesAsync();
             return marcacao;
         }
 
@@ -64,8 +50,8 @@ namespace Karapinha.Repositorios.Repositorio
             {
                 throw new KeyNotFoundException($"Marcação {id} não encontrada");
             }
-            _dbcontex.Remove(marcacaoPorId);
-            await _dbcontex.SaveChangesAsync();
+            _dbContext.Remove(marcacaoPorId);
+            await _dbContext.SaveChangesAsync();
             return marcacaoPorId;
         }
 
@@ -76,14 +62,14 @@ namespace Karapinha.Repositorios.Repositorio
             {
                 throw new KeyNotFoundException($"Marcação {id} não encontrada");
             }
-            marcacaoPorId.hora = marcacao.hora;
+            marcacaoPorId.Hora = marcacao.Hora;
             marcacaoPorId.DiaSemana = marcacao.DiaSemana;
-            marcacaoPorId.ProfissionalNome = marcacao.ProfissionalNome;
-            marcacaoPorId.CategoriaNome = marcacao.CategoriaNome;
-            marcacaoPorId.ServicoNome = marcacao.ServicoNome;
+            marcacaoPorId.Profissionais = marcacao.Profissionais;
+            marcacaoPorId.Categorias = marcacao.Categorias;
+            marcacaoPorId.Servicos = marcacao.Servicos;
 
-            _dbcontex.Update(marcacaoPorId);
-            await _dbcontex.SaveChangesAsync();
+            _dbContext.Update(marcacaoPorId);
+            await _dbContext.SaveChangesAsync();
             return marcacaoPorId;
         }
     }

@@ -1,20 +1,29 @@
-﻿
-namespace Karapinha.Model
-{
-    public class Utilizador
-    {
-        public int id { get; set; }
-        public string nomeCompleto { get; set; }
-        public string endereco { get; set; }
-        public string telemovel { get; set; }
-        public string bi { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public byte[] photo { get; set; }
+﻿using System.ComponentModel.DataAnnotations;
 
-        public static implicit operator bool(Utilizador v)
-        {
-            throw new NotImplementedException();
-        }
-    }
+public class Utilizador
+{
+    public int Id { get; set; } 
+
+    [Required]
+    public string NomeCompleto { get; set; }
+
+    [Required]
+    public string Endereco { get; set; }
+
+    [Required]
+    public string Telemovel { get; set; }
+
+    [Required]
+    public string Bi { get; set; }
+
+    [Required]
+    public string Username { get; set; }
+
+    [Required]
+    public string Password { get; set; }
+
+    [Required]
+    public byte[] Photo { get; set; } // `photo` deve ser um array de bytes
+    public string NivelAcesso { get; set; }
+
 }

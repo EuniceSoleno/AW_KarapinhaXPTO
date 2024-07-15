@@ -8,18 +8,17 @@ namespace Karapinha.Data
     {
         public KarapinhaDBContext(DbContextOptions<KarapinhaDBContext> options) : base(options) { }
 
-        public DbSet<Categoria>Categorias { get; set; }
-        public DbSet <Marcacao>Marcacoes { get; set; }
-        public DbSet<Profissional>Profissionais { get; set; }
-        public DbSet<Servico>Servicos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Marcacao> Marcacoes { get; set; }
+        public DbSet<Profissional> Profissionais { get; set; }
+        public DbSet<Servico> Servicos { get; set; }
         public DbSet<Utilizador> Utilizadores { get; set; }
-        public DbSet<TabelaDeHorario> TabelaDeHorario { get; set; }
-
+        public DbSet<TabelaDeHorario> TabelasDeHorarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UtilizadorMap());
-            modelBuilder.ApplyConfiguration(new TabelaHorarioMap());
+            modelBuilder.ApplyConfiguration(new TabelaDeHorarioMap());
             modelBuilder.ApplyConfiguration(new ServicoMap());
             modelBuilder.ApplyConfiguration(new ProfissionalMap());
             modelBuilder.ApplyConfiguration(new MarcacaoMap());

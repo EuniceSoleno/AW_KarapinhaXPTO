@@ -2,7 +2,6 @@
 using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,71 +9,63 @@ namespace Karapinha.Repositorios.Repositorio
 {
     public class UtilizadorRepositorio : IUtilizadorRepositorio
     {
-        private readonly KarapinhaDBContext _dbcontext;
+        private readonly KarapinhaDBContext _dbContext;
 
-        public UtilizadorRepositorio(KarapinhaDBContext dbcontext)
+        public UtilizadorRepositorio(KarapinhaDBContext dbContext)
         {
-            _dbcontext = dbcontext;
-        }
-
-        public async Task<Utilizador> BuscarPorId(int id)
-        {
-            return await _dbcontext.Utilizadores.FirstOrDefaultAsync(x => x.id == id);
+            _dbContext = dbContext;
         }
 
         public async Task<List<Utilizador>> BuscarTodosUtilizadores()
         {
-            return await _dbcontext.Utilizadores.ToListAsync();
+            return await _dbContext.Utilizadores.ToListAsync();
+        }
+
+        public async Task<Utilizador> BuscarPorId(int id)
+        {
+            return await _dbContext.Utilizadores.FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<Utilizador> Adicionar(Utilizador utilizador)
         {
-            if (utilizador == null)
-            {
-                throw new ArgumentNullException(nameof(utilizador), "O utilizador não pode ser nulo.");
-            }
-
-            await _dbcontext.Utilizadores.AddAsync(utilizador);
-            await _dbcontext.SaveChangesAsync();
+            await _dbContext.Utilizadores.AddAsync(utilizador);
+            await _dbContext.SaveChangesAsync();
             return utilizador;
         }
 
         public async Task<Utilizador> Atualizar(Utilizador utilizador, int id)
         {
-            if (utilizador == null)
+            var utilizadorExistente = await BuscarPorId(id);
+            if (utilizadorExistente == null)
             {
-                throw new ArgumentNullException(nameof(utilizador), "O utilizador não pode ser nulo.");
+                return null;
             }
 
-            var utilizadorPorId = await BuscarPorId(id);
-            if (utilizadorPorId == null)
-            {
-                throw new KeyNotFoundException($"Utilizador com id {id} não encontrado.");
-            }
+            utilizadorExistente.NomeCompleto = utilizador.NomeCompleto;
+            utilizadorExistente.Endereco = utilizador.Endereco;
+            utilizadorExistente.Telemovel = utilizador.Telemovel;
+            utilizadorExistente.Bi = utilizador.Bi;
+            utilizadorExistente.Username = utilizador.Username;
+            utilizadorExistente.Password = utilizador.Password;
+            utilizadorExistente.Photo = utilizador.Photo;
+            utilizadorExistente.NivelAcesso = utilizador.NivelAcesso; // Novo campo
 
-            utilizadorPorId.password = utilizador.password;
-            utilizadorPorId.bi = utilizador.bi;
-            utilizadorPorId.telemovel = utilizador.telemovel;
-            utilizadorPorId.username = utilizador.username;
-            utilizadorPorId.nomeCompleto = utilizador.nomeCompleto;
-            utilizadorPorId.endereco = utilizador.endereco;
-
-            _dbcontext.Update(utilizadorPorId);
-            await _dbcontext.SaveChangesAsync();
-            return utilizadorPorId;
+            _dbContext.Utilizadores.Update(utilizadorExistente);
+            await _dbContext.SaveChangesAsync();
+            return utilizadorExistente;
         }
 
-        public async Task<Utilizador> Apagar(int id)
+        public async Task<bool> Apagar(int id)
         {
-            var utilizadorPorId = await BuscarPorId(id);
-            if (utilizadorPorId == null)
+            var utilizador = await BuscarPorId(id);
+            if (utilizador == null)
             {
-                throw new KeyNotFoundException($"Utilizador com id {id} não encontrado.");
+                return false;
             }
 
-            _dbcontext.Remove(utilizadorPorId);
-            await _dbcontext.SaveChangesAsync();
-            return utilizadorPorId;
+            _dbContext.Utilizadores.Remove(utilizador);
+            await _dbContext.SaveChangesAsync();
+            return true;
         }
     }
 }

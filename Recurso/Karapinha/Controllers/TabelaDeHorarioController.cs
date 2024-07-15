@@ -1,14 +1,13 @@
 ﻿using Karapinha.Model;
 using Karapinha.Repositorios.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-/*namespace Karapinha.Controllers
+namespace Karapinha.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class TabelaDeHorarioController : ControllerBase
     {
         private readonly ITabelaDeHorarioRepositorio _tabelaDeHorarioRepositorio;
@@ -18,54 +17,51 @@ using System.Threading.Tasks;
             _tabelaDeHorarioRepositorio = tabelaDeHorarioRepositorio;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<TabelaDeHorario>>> BuscarTodosHorarios()
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
         {
-            List<TabelaDeHorario> horarios = await _tabelaDeHorarioRepositorio.BuscarTodosHorarios();
-            return Ok(horarios);
+            var tabelaDeHorario = await _tabelaDeHorarioRepositorio.BuscarPorId(id);
+            if (tabelaDeHorario == null)
+            {
+                return NotFound();
+            }
+            return Ok(tabelaDeHorario);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<TabelaDeHorario>> BuscarPorId(int id)
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            TabelaDeHorario horario = await _tabelaDeHorarioRepositorio.BuscarPorId(id);
-            if (horario == null)
-            {
-                return NotFound($"Horário com id: {id} não encontrado");
-            }
-            return Ok(horario);
+            var tabelasDeHorario = await _tabelaDeHorarioRepositorio.BuscarTodos();
+            return Ok(tabelasDeHorario);
         }
 
         [HttpPost]
-        public async Task<ActionResult<TabelaDeHorario>> Cadastrar([FromBody] TabelaDeHorario horario)
+        public async Task<IActionResult> Post([FromBody] TabelaDeHorario tabelaDeHorario)
         {
-            TabelaDeHorario novoHorario = await _tabelaDeHorarioRepositorio.Adicionar(horario);
-            return Ok(novoHorario);
+            var novaTabelaDeHorario = await _tabelaDeHorarioRepositorio.Adicionar(tabelaDeHorario);
+            return CreatedAtAction(nameof(Get), new { id = novaTabelaDeHorario.Id }, novaTabelaDeHorario);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<TabelaDeHorario>> Atualizar([FromBody] TabelaDeHorario horario, int id)
+        public async Task<IActionResult> Put(int id, [FromBody] TabelaDeHorario tabelaDeHorario)
         {
-            TabelaDeHorario horarioAtualizado = await _tabelaDeHorarioRepositorio.Atualizar(horario, id);
-            if (horarioAtualizado == null)
+            var tabelaDeHorarioAtualizada = await _tabelaDeHorarioRepositorio.Atualizar(tabelaDeHorario, id);
+            if (tabelaDeHorarioAtualizada == null)
             {
-                return NotFound($"Horário com id {id} não encontrado.");
+                return NotFound();
             }
-            return Ok(horarioAtualizado);
+            return Ok(tabelaDeHorarioAtualizada);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<bool>> Remover(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            bool apagado = await _tabelaDeHorarioRepositorio.Apagar(id);
-            if (apagado)
+            var tabelaDeHorario = await _tabelaDeHorarioRepositorio.Apagar(id);
+            if (tabelaDeHorario == null)
             {
-                return Ok(apagado);
+                return NotFound();
             }
-            else
-            {
-                return NotFound($"Horário com id {id} não encontrado.");
-            }
+            return Ok(tabelaDeHorario);
         }
     }
-}*/
+}

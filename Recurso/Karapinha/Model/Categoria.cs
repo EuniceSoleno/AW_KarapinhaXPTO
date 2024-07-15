@@ -13,7 +13,6 @@ namespace Karapinha.Model
             Descricao = descricao;
         }
 
-
         public static implicit operator bool(Categoria v)
         {
             throw new NotImplementedException();

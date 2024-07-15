@@ -4,7 +4,7 @@
 
 namespace Karapinha.Migrations
 {
-    public partial class texte1 : Migration
+    public partial class Marcacoes : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -1,6 +1,6 @@
 ﻿using Karapinha.Model;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Karapinha.Data.Map
 {
@@ -10,23 +10,9 @@ namespace Karapinha.Data.Map
         {
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.CategoriaNome).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.ServicoNome).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.ProfissionalNome).IsRequired().HasMaxLength(255);
             builder.Property(x => x.DiaSemana).IsRequired().HasMaxLength(10);
-            builder.Property(x => x.hora).IsRequired().HasMaxLength(2);
-            builder.Property(x => x.minuto).IsRequired().HasMaxLength(2);
-            builder.Property(x => x.CategoriaNome).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.ProfissionalNome).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.ServicoNome).IsRequired().HasMaxLength(100);
-
-           /* builder.HasOne(x => x.Categoria);
-
-
-            builder.HasOne(x => x.Servico);
-
-            builder.HasOne(x => x.Profissional);*/
-
+            builder.Property(x => x.Hora).IsRequired().HasMaxLength(2);
+            builder.Property(x => x.Minuto).IsRequired().HasMaxLength(2);
         }
     }
 }
